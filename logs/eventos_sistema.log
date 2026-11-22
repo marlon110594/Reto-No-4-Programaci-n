@@ -1,0 +1,22 @@
+[2026-11-22 08:58:32] [INFO] [SistemaGestionFJ] Sistema inicializado correctamente.
+[2026-11-22 08:58:32] [INFO] [Clientes] Cliente registrado exitosamente: Cliente [CLI-001] Laura Gómez | Email: laura.gomez@empresa.com | Tel: 3104567890
+[2026-11-22 08:58:32] [INFO] [Clientes] Cliente registrado exitosamente: Cliente [CLI-002] Carlos Mendoza | Email: cmendoza@techcol.co | Tel: 3209876543
+[2026-11-22 08:58:32] [ERROR] [Main] Bloqueado en instanciación de Cliente: [ERR-DATO] Formato de correo electrónico inválido: 'andres_correo_invalido'.
+[2026-11-22 08:58:32] [ERROR] [Clientes] Fallo al registrar cliente: [ERR-DATO] El correo 'laura.gomez@empresa.com' ya pertenece a otro cliente.
+[2026-11-22 08:58:32] [INFO] [Servicios] Servicio añadido: Sala 'Sala Innovación Ágil' (Capacidad: 12 personas, con equipo de videoconferencia) | Tarifa: $85,000.00/h
+[2026-11-22 08:58:32] [INFO] [Servicios] Servicio añadido: Equipo 'Workstation GPU RTX' [Categoría: Computación Alto Rendimiento] (Depósito garantía: $100,000.00) | Tarifa: $45,000.00/h
+[2026-11-22 08:58:32] [INFO] [Servicios] Servicio añadido: Asesoría 'Arquitectura Cloud' en Computación en la Nube (Consultor Senior (+25%)) | Tarifa: $120,000.00/h
+[2026-11-22 08:58:32] [INFO] [Servicios] Servicio añadido: Sala 'Sala Mantenimiento' (Capacidad: 6 personas, con equipo de videoconferencia) | Tarifa: $60,000.00/h
+[2026-11-22 08:58:32] [ERROR] [Main] Bloqueado en instanciación de Servicio: [ERR-DATO] La tarifa base (-25000) debe ser un número positivo mayor a cero.
+[2026-11-22 08:58:32] [INFO] [Reservas] Reserva creada: Reserva [RES-101] | Cliente: Laura Gómez | Servicio: Sala Innovación Ágil (4h) | Total: $364,140.00 | Estado: PENDIENTE
+[2026-11-22 08:58:32] [AUDIT] [Reservas] Finalizado intento de transacción para reserva 'RES-101'.
+[2026-11-22 08:58:32] [INFO] [Reservas] Reserva creada: Reserva [RES-102] | Cliente: Carlos Mendoza | Servicio: Workstation GPU RTX (3h) | Total: $260,650.00 | Estado: PENDIENTE
+[2026-11-22 08:58:32] [AUDIT] [Reservas] Finalizado intento de transacción para reserva 'RES-102'.
+[2026-11-22 08:58:32] [INFO] [Main] Ajuste sobrecargado aplicado a RES-102 -> Nuevo total: $367,750.00
+[2026-11-22 08:58:32] [ERROR] [Reservas] Error al crear reserva 'RES-103': [ERR-RESV] No fue posible inicializar la reserva 'RES-103' por error en parámetros. | Causa raíz: [ERR-DATO] El alquiler de equipos requiere mínimo 2 horas (recibido: 1).
+[2026-11-22 08:58:32] [AUDIT] [Reservas] Finalizado intento de transacción para reserva 'RES-103'.
+[2026-11-22 08:58:32] [ERROR] [Reservas] Error al crear reserva 'RES-104': [ERR-SERV] El servicio 'Sala Mantenimiento' no se encuentra disponible actualmente.
+[2026-11-22 08:58:32] [AUDIT] [Reservas] Finalizado intento de transacción para reserva 'RES-104'.
+[2026-11-22 08:58:32] [INFO] [EstadosReserva] Reserva 'RES-101' actualizada -> Nuevo estado: CONFIRMADA
+[2026-11-22 08:58:32] [INFO] [EstadosReserva] Reserva 'RES-101' actualizada -> Nuevo estado: PROCESADA
+[2026-11-22 08:58:32] [ERROR] [EstadosReserva] Acción 'cancelar' fallida: [ERR-OPER] Imposible cancelar la reserva 'RES-101' porque ya fue PROCESADA.
